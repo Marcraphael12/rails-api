@@ -1,6 +1,7 @@
 class Author < ApplicationRecord
-  validates :name, presence: true, uniqness: true
+  validates :name, presence: true
+  
   validates :age, presence: true
 
-  has_may :books, dependent: :destroy
+  has_many :books, dependent: :destroy
 end
